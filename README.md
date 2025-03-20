@@ -2,19 +2,7 @@
 
 The project follows the structure below:
 
-project/
-│── venv/                  <!-- Python Virtual Environment --> 
-│── data/                  <!-- Stores CSV files and other datasets  -->
-│   ├── raw/               <!-- Raw, unprocessed data -->
-│   ├── processed/         <!-- Processed data, cleaned and ready for analysis -->
-│── src/                   <!-- Main source code -->
-│   ├── __init__.py        <!-- Initializes the src package -->
-│   ├── data_loader.py     <!-- Functions to load CSV files -->
-│   ├── data_cleaner.py    <!-- Functions for data cleaning -->
-│   ├── analysis.py        <!-- Code for data analysis -->
-│── main.py                <!-- Main file that runs the project -->
-│── requirements.txt       <!-- Project dependencies -->
-│── README.md              <!-- Project documentation -->
+![Project Architecture](https://drive.google.com/file/d/1UU0xMRi9qYd60lk74xkoU6nBEuHoa7QL/view?usp=sharing)
 
 ## Description of the folders:
 
