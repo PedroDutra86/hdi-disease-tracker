@@ -2,7 +2,7 @@
 
 The project follows the structure below:
 
-![Project Architecture](https://drive.google.com/file/d/1UU0xMRi9qYd60lk74xkoU6nBEuHoa7QL/view?usp=sharing)
+![Project Architecture](https://imgur.com/a/42vHXCs)
 
 ## Description of the folders:
 
