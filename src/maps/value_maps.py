@@ -1,16 +1,60 @@
 important_columns = [
   "TP_NOT", "ID_AGRAVO", "DT_NOTIFIC",
   "SG_UF_NOT", "ID_MUNICIP", "ID_UNIDADE", 
-  "DT_SIN_PRI", "SEM_PRI", "ANO_NASC", "NU_IDADE_N", "CS_SEXO", 
-  "CS_GESTANT", "CS_RACA", "CS_ESCOL_N", "SG_UF", "ID_MN_RESI", 
-  "ID_RG_RESI", "ID_PAIS", "DT_INVEST", "ID_OCUPA_N", "FEBRE", 
+  "DT_SIN_PRI", "ANO_NASC", "CS_SEXO", 
+  "CS_GESTANT", "CS_RACA", "SG_UF", "ID_MN_RESI", "ID_PAIS", "DT_INVEST", "FEBRE", 
   "MIALGIA", "CEFALEIA", "EXANTEMA", "VOMITO", "NAUSEA", 
   "DOR_COSTAS", "CONJUNTVIT", "ARTRITE", "ARTRALGIA", "PETEQUIA_N", 
   "LEUCOPENIA", "LACO", "DOR_RETRO", "DIABETES", "HEMATOLOG", 
   "HEPATOPAT", "RENAL", "HIPERTENSA", "ACIDO_PEPT", "AUTO_IMUNE", 
-  "HOSPITALIZ", "DT_INTERNA", "EVOLUCAO", "DT_OBITO", "CLASSI_FIN", 
-  "CRITERIO"
+  "HOSPITALIZ", "DT_INTERNA", "DT_OBITO",
 ]
+columns_renamed_map = {
+  "TP_NOT": "Tipo de Notificação",
+  "ID_AGRAVO": "Agravo",
+  "DT_NOTIFIC": "Data de Notificação",
+  "SG_UF_NOT": "UF da Notificação",
+  "ID_MUNICIP": "Município da Notificação",
+  "ID_UNIDADE": "Unidade de Saúde",
+  "DT_SIN_PRI": "Data dos Primeiros Sintomas",
+  "ANO_NASC": "Ano de Nascimento",
+  "CS_SEXO": "Sexo",
+  "CS_GESTANT": "Gestante",
+  "CS_RACA": "Raça",
+  "SG_UF": "UF de Residência",
+  "ID_MN_RESI": "Município de Residência",
+  "ID_PAIS": "País de Residência",
+  "DT_INVEST": "Data da Investigação",
+  "FEBRE": "Febre",
+  "MIALGIA": "Mialgia",
+  "CEFALEIA": "Cefaleia",
+  "EXANTEMA": "Exantema",
+  "VOMITO": "Vômito",
+  "NAUSEA": "Náusea",
+  "DOR_COSTAS": "Dor nas Costas",
+  "CONJUNTVIT": "Conjuntivite",
+  "ARTRITE": "Artrite",
+  "ARTRALGIA": "Artralgia",
+  "PETEQUIA_N": "Petéquias",
+  "LEUCOPENIA": "Leucopenia",
+  "LACO": "Teste do Laço",
+  "DOR_RETRO": "Dor Retro-Orbital",
+  "DIABETES": "Diabetes",
+  "HEMATOLOG": "Doença Hematológica",
+  "HEPATOPAT": "Hepatopatia",
+  "RENAL": "Doença Renal",
+  "HIPERTENSA": "Hipertensão",
+  "ACIDO_PEPT": "Úlcera Péptica",
+  "AUTO_IMUNE": "Doença Autoimune",
+  "HOSPITALIZ": "Hospitalização",
+  "DT_INTERNA": "Data da Internação",
+  "DT_OBITO": "Data do Óbito"
+}
+
+
+country_map = { 
+  1: "Brasil",
+}
 
 uf_map = {
   12: "Acre",
@@ -51,15 +95,50 @@ tp_not_map = {
 
 id_unidade_map = {
   # Rio de Janeiro
-  2275635: "Hospital Santa Teresa",
-  6909663: "UPA Washington Luiz",
+  # Petrópolis
+  9016481: "Academia da Saúde Geraldo Mendes da Silva (Castelo São Manoel)",
+  9067027: "A M Saúde Serviços Médicos Ltda",
+  6187668: "Baffi (Bernardo Proença)",
+  2268736: "Baffi (Rua do Imperador)",
   3030415: "Beneficiência Portuguesa",
+  2299380: "CIEP Posse",
+  7937083: "Coordenadoria de Vigilância Epidemiológica",
+  2275635: "Hospital Santa Teresa",
   2275562: "Hospital Alcides Carneiro",
-  6943772: "Laboratório de Corrêas",
   2275589: "Hospital Municipal Dr. Nelson de Sá Earp",
+  2275619: "Hospital Clínico de Corrêas",
+  6943772: "Laboratório de Corrêas (Rua Teresa)",
+  7421508: "Laboratório de Corrêas (Hyvio Naliato)",
+  6943853: "Laboratório de Corrêas (Nelson de Sá Earp)",
+  6943802: "Laboratório de Corrêas (Dr. Paulo Lobo de Moraes)",
+  7224214: "Laboratório de Corrêas (Itaipava)",
+  3852717: "Laboratório de Corrêas (Itaipava)",
+  2268671: "Laboratório de Corrêas (Corrêas)",
+  3536025: "MLP Medicina Laboratorial de Petrópolis",
+  2275791: "Posto de Saúde do Caxambu",
+  2275554: "Pronto Socorro Leonidas Sampaio",
+  2275767: "Posto de Saúde da Posse",
+  3340635: "Posto de Saúde do Alto da Serra",
+  3616851: "Posto de Saúde do Bataillard",
+  2275872: "Posto de Saúde do Carangola",
+  2275678: "Posto de Saúde do Vila Rica",
+  2275864: "Posto de Saúde do São Sebastião",
+  3370240: "Posto de Saúde do Sargento Boening",
+  5662370: "Posto de Saúde Santíssima Trindade",
+  2275759: "Posto de Saúde do Vale do Carangola",
+  2766744: "Posto de Saúde do Águas Lindas",
+  2275902: "Posto de Saúde de Itaipava",
+  2275708: "Posto de Saúde DR. Thouzet",
+  2275953: "Posto de Saúde do Fazenda Inglesa",
+  3049817: "Posto de Saúde Nova Cascatinha",
+  5997674: "PFS Dr. Sérgio Luís Bastos",
+  4204867: "UBS Sebastião Ismério Cardoso",
+  6757677: "UBS Amazonas",
+  6909663: "UPA Centro",
   4751140: "UPH Pedro do Rio",
   6922597: "UPA Cascatinha",
-  3972976: "Unimed Bingen"
+  3972976: "Unimed Bingen",
+  4053974: "Unimed D. Pedro I",
 }
 
 value_mappings = {
@@ -67,7 +146,7 @@ value_mappings = {
   "CS_SEXO": {"F": "Masculino", "M": "Feminino", 9: "Ignorado"},
   "CS_GESTANT": {1: "1º trimestre", 2: "2º trimestre", 3: "3º trimestre", 4: "Idade gestacional ignorada", 5: "Não", 6: "Não", 9: "Ignorado"},
   "CS_RACA": {1: "Branca", 2: "Preta", 3: "Amarela", 4: "Parda", 5: "Indígena", 9: "Ignorado"},
-  "CS_ESCOL_N": {"0": "Sem escolaridade", 1: "Fundamental 1", 2: "Fundamental 2", 3: "Médio", 4: "Superior", 5: "Ignorado"},
+  "CS_ESCOL_N": {1: "1ª à 4ª série incompleta (Ensino Fundamental)", 2: "4ª série completa (Ensino Fundamental)", 3: "5ª à 8ª série incompleta (Ensino Fundamental)", 4: "Ensino Fundamental Completo", 5: "Ensino Médio incompleto", 6: "Ensino Médio completo", 7: "Educação Superior incompleta", 8: "Educação Superior completa", 9: "Ignorado", 10: "Não se aplica", 43: "Analfabeto"},
   "FEBRE": {1: "Sim", 2: "Não"},
   "MIALGIA": {1: "Sim", 2: "Não"},
   "CEFALEIA": {1: "Sim", 2: "Não"},
@@ -93,7 +172,8 @@ value_mappings = {
   "EVOLUCAO": {1: "Cura", 2: "Óbito por dengue", 3: "Óbito por outras causas", 9: "Ignorado"},
   "CLASSI_FIN": {1: "Dengue clássico", 2: "Dengue com complicação", 3: "Febre hemorrágica do dengue", 4: "Síndrome do choque do dengue", 5: "Descartado"},
   "CRITERIO": {1: "Laboratorial", 2: "Clínico-epidemiológico", 3: "Clínico", 9: "Ignorado"},
-  "DT_OBITO": {"NaN": "Não informado"}
+  "DT_OBITO": {"NaN": "Não informado"},
+  "RESUL_PRNT": {1: "Reagente", 2: "Não reagente", 3: "Inconclusivo", 4: "Não realizado"}
 }
 
 cities_map = {
