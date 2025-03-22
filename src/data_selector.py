@@ -1,4 +1,4 @@
-from src.maps.value_maps import important_columns
+from maps.value_maps import important_columns
 
 def select_data(df):
 
