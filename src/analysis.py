@@ -9,7 +9,10 @@ def main():
     base_dir = os.path.dirname(os.path.abspath(__file__))
 
     raw_data_path = os.path.join(base_dir, "..", "data", "raw", "DENGBR25.csv")
-    output_path = os.path.join(base_dir, "..", "data", "processed", "DENGBR25_processed.csv")
+    processed_dir = os.path.join(base_dir, "..", "data", "processed")
+    output_path = os.path.join(processed_dir, "DENGBR25_processed.csv")
+
+    os.makedirs(processed_dir, exist_ok=True)
 
     df = load_data(raw_data_path)
     df = select_data(df)
