@@ -16,7 +16,6 @@ The project follows the structure below:
 ![Project Architecture](https://i.imgur.com/Pygo1Ui.png)
 
 ## 📂 Description of the Folders
-
 - **`data/`**: Contains the datasets used in the project. It is subdivided into:
   - **`raw/`**: Stores the original datasets before any modification.
   - **`processed/`**: Stores the cleaned and processed datasets, ready for analysis.
@@ -42,7 +41,6 @@ The project follows the structure below:
 - **`requirements.txt`**: Contains the list of dependencies needed to run the project.
 
 ## 🚀 Installation
-
 To set up the project locally, follow these steps:
 
 1. **Clone the repository**:
@@ -62,13 +60,15 @@ To set up the project locally, follow these steps:
 
 3. Install dependencies:
   ```bash
-  pip install -r requirements.txt```
+  pip install -r requirements.txt
+  ```
 
 ## ⚒️ Usage
 
 1. After setting up the environment and installing dependencies, run the project with:
   ```bash
   python src/analysis.py
+  ```
 
 This will execute the data processing pipeline, including loading, cleaning and analyzing the dataset
 
@@ -93,7 +93,7 @@ This project is licensed under the MIT License - see the [MIT License](./LICENSE
 
 ## 📩 Contact
 
-For questions or seggestions, reach out via?
+For questions or seggestions, reach out via:
 - Email: pedrodutra@infoservicetechnology.com.br
 - LinkedIn: https://www.linkedin.com/in/pedro-paulo-dutra-a62365184/
 - GitHub: https://github.com/PedroDutra86
