@@ -68,7 +68,7 @@ To set up the project locally, follow these steps:
 
 1. After setting up the environment and installing dependencies, run the project with:
   ```bash
-  python src/analysis.py```
+  python src/analysis.py
 
 This will execute the data processing pipeline, including loading, cleaning and analyzing the dataset
 
