@@ -1,1 +1,2 @@
-from .value_maps import value_mappings, uf_map, cities_map, tp_not_map, id_unidade_map, important_columns, country_map, columns_renamed_map
+from .value_maps import dengue_columns, COUNTRY_MAP, COLUMNS_RENAMED_MAP, NUMERIC_KEYS_MAP, TEXT_KEYS_MAP, UF_MAP, WEEK_MAP, NU_IDADE_MAP, DATE_COLUMNS, CITIES_COLUMNS, UF_COLUMNS
+from .municipes_cnes_map import CITIES_MAP, ID_UNIDADE_MAP
